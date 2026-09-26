@@ -1,63 +1,130 @@
-## Hi, I'm Cheah Ken Win 👋
+<h1 align="center">Cheah Ken Win</h1>
 
-Final-semester **Computer Science** student at **Universiti Tunku Abdul Rahman (UTAR)**, completing my degree in **October 2026**.
-I work on **computer vision** and **AI engineering**, especially detection models, vision-language models, and getting models into working products.
+<p align="center">
+  <b>Computer Vision · AI Engineering · Software Engineering</b><br>
+  Final-year Computer Science student at Universiti Tunku Abdul Rahman (UTAR), completing my degree in October 2026 · Malaysia
+</p>
 
-🎯 **Looking for:** graduate roles in **Computer Vision**, **AI Engineering** or **Software Engineering**, available from October 2026<br>
-📫 **Email:** [wincheahken@gmail.com](mailto:wincheahken@gmail.com)
-
----
-
-### Projects
-
-**Hybrid PCB Defect Inspection with YOLO and Vision-Language Models**: Final Year Project, UTAR
-- Designed a three-stage inspection framework:
-  - a **YOLOv11n Observer** localises defects quickly
-  - an **Agentic Gateway** routes each detection by class and confidence, either rejecting it or escalating it
-  - a **VLM Judge** re-examines escalated high-resolution crops with bounding-box guidance and structured responses (structural damage, conductor interaction)
-- Extended a **TDD-Net**-derived dataset (6 defect classes) with **11 synthetic anomaly categories**, to test behaviour beyond known defects
-- Observer: **0.962 mAP@0.5**, 0.599 mAP@0.5:0.95, 0.972 precision and 0.968 recall on a 1,443-image test set
-- Benchmarked **7 VLM configurations**, a pure-YOLO baseline and ablations:
-  - **GPT-5.5** gave the best diagnostic accuracy
-  - **Qwen3-VL-30B-A3B (MoE)** cut Observer overkill (false rejections) by **52.7%**
-- Proposed the **Overkill Reduction Rate (ORR)** as a system-level metric. A VLM's general accuracy did not predict how well it adjudicates, and MoE variants beat Dense variants on ORR
-- `YOLOv11` `PyTorch` `Vision-Language Models` `GPT-5.5` `Qwen3-VL` `Python` · *Computer Vision, AI for Smart Manufacturing*
-
-**[SuperResAI](https://github.com/kwincheah/superres-ai)**: AI image super-resolution platform
-- Upscales low-resolution images 4× with **Real-ESRGAN** (RRDBNet), using the general and anime model variants
-- Runs **PyTorch** inference on serverless **GPU workers (Modal)**, with asynchronous job processing so the UI never blocks
-- **FastAPI** backend, **Next.js** frontend with a before/after comparison view, and **Supabase** for job tracking and image storage
-- `PyTorch` `Real-ESRGAN` `Pillow` `NumPy` `FastAPI` `Next.js` `Supabase` `Modal`
-
-**[WhatsApp Voice & Document Assistant](https://github.com/kwincheah/whatsapp_transcript_service)**: AI assistant on WhatsApp
-- Transcribes voice notes and videos, summarises and translates them, and answers questions about forwarded files
-- **OCR for scanned PDFs**: renders pages without a text layer to images and reads them with a vision model, OCR-ing only the pages that need it
-- Reads PDF and Word documents and can search the web, showing the latency and cost of every reply
-- Deployed with **Docker on Railway**, with **CI** running a pytest suite
-- `Python` `FastAPI` `OpenAI API` `DeepSeek` `pypdfium2` `SQLite` `Docker` `GitHub Actions`
-
-**[TensorFlow ML Container](https://github.com/kwincheah/TFContainerDockerCodebase)**: reproducible training environment
-- Ubuntu + Python + TensorFlow image with NumPy, Pandas, Matplotlib and scikit-learn
-- A **GitHub Actions** workflow publishes it to GitHub Container Registry
-- `Docker` `TensorFlow` `GitHub Actions`
-
-**[BuildIt Construction](https://github.com/kwincheah/ConstructionLandingPage)**: responsive business website
-- Services, projects gallery, contact form and light/dark theme
-- `Next.js` `React` `TypeScript` `Tailwind CSS`
+<p align="center">
+  <a href="mailto:wincheahken@gmail.com"><img src="https://img.shields.io/badge/Email-wincheahken%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://github.com/kwincheah"><img src="https://img.shields.io/badge/GitHub-kwincheah-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
+  <img src="https://img.shields.io/badge/Open_to-Graduate_roles-2EA44F?style=flat-square" alt="Open to graduate roles">
+</p>
 
 ---
 
-### Skills
+### 👋 About me
 
-- **Computer vision:** object detection (YOLOv11), vision-language models (GPT-5.5, Qwen3-VL), image super-resolution (Real-ESRGAN), OCR pipelines, synthetic data generation, evaluation (mAP, precision/recall)
-- **ML frameworks:** PyTorch, TensorFlow, scikit-learn, NumPy, Pillow
-- **AI engineering:** model deployment on GPU workers, LLM & speech APIs (OpenAI, DeepSeek), asynchronous job queues
-- **Backend:** Python, FastAPI, REST APIs, PostgreSQL (Supabase), SQLite
-- **Frontend:** TypeScript, React, Next.js, Tailwind CSS
-- **Tools:** Git, Docker, GitHub Actions, Linux
+- I build **computer vision** systems: object detection, vision-language models and image enhancement
+- I care about the whole pipeline: **datasets → training → evaluation → deployment**
+- 🎯 Looking for **graduate roles in Computer Vision, AI Engineering or Software Engineering**, available from **October 2026**
 
 ---
 
-### Contact
+### 🔬 Featured: Final Year Project
 
-📫 [wincheahken@gmail.com](mailto:wincheahken@gmail.com)
+#### Hybrid PCB Defect Inspection with YOLO and Vision-Language Models
+
+A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce false rejections (overkill)** caused by harmless visual anomalies.
+
+<p align="center">
+  <code>YOLOv11n Observer</code> &nbsp;→&nbsp; <code>Agentic Gateway</code> &nbsp;→&nbsp; <code>VLM Judge</code><br>
+  <sub>fast defect localisation &nbsp;·&nbsp; class- and confidence-aware routing &nbsp;·&nbsp; semantic check of escalated crops</sub>
+</p>
+
+<table align="center">
+  <tr>
+    <th>mAP@0.5</th>
+    <th>mAP@0.5:0.95</th>
+    <th>Precision</th>
+    <th>Recall</th>
+    <th>Overkill reduction</th>
+    <th>VLM configurations tested</th>
+  </tr>
+  <tr align="center">
+    <td><b>0.962</b></td>
+    <td>0.599</td>
+    <td>0.972</td>
+    <td>0.968</td>
+    <td><b>52.7%</b></td>
+    <td>7</td>
+  </tr>
+</table>
+
+- Extended a **TDD-Net**-derived dataset (6 defect classes) with **11 synthetic anomaly categories** to test behaviour beyond known defects. Evaluated on a fixed **1,443-image** test set.
+- Escalated detections go to the VLM as **high-resolution crops with bounding-box guidance**, which returns structured judgements on structural damage and conductor interaction
+- **GPT-5.5** achieved the best diagnostic accuracy. **Qwen3-VL-30B-A3B (MoE)** achieved the highest overkill reduction, and MoE variants clearly beat Dense variants on it
+- Proposed the **Overkill Reduction Rate (ORR)** as a system-level metric: a VLM's general accuracy did **not** predict how well it adjudicates
+
+`YOLOv11` `PyTorch` `Vision-Language Models` `GPT-5.5` `Qwen3-VL` `Python` &nbsp;·&nbsp; *Computer Vision, AI for Smart Manufacturing*
+
+---
+
+### 🚀 Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/superres-ai">🖼️ SuperResAI</a></b><br>
+      <sub>AI image super-resolution platform</sub>
+      <ul>
+        <li>4× upscaling with <b>Real-ESRGAN</b> (RRDBNet) on <b>GPU workers</b> (Modal)</li>
+        <li>Asynchronous job processing, so the UI never blocks</li>
+        <li>FastAPI backend, Next.js frontend with a before/after view, Supabase for jobs and storage</li>
+      </ul>
+      <code>PyTorch</code> <code>Real-ESRGAN</code> <code>FastAPI</code> <code>Next.js</code> <code>Supabase</code>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/whatsapp_transcript_service">🎙️ WhatsApp Voice & Document Assistant</a></b><br>
+      <sub>AI assistant on WhatsApp</sub>
+      <ul>
+        <li>Transcribes, summarises and translates voice notes and videos</li>
+        <li><b>OCR for scanned PDFs</b> with a vision model; answers questions about documents; web search</li>
+        <li>Docker on Railway, with CI running a pytest suite</li>
+      </ul>
+      <code>Python</code> <code>FastAPI</code> <code>OpenAI</code> <code>DeepSeek</code> <code>Docker</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/TFContainerDockerCodebase">🐳 TensorFlow ML Container</a></b><br>
+      <sub>Reproducible training environment</sub>
+      <ul>
+        <li>Ubuntu + Python + TensorFlow image with NumPy, Pandas and scikit-learn</li>
+        <li>Published to GitHub Container Registry by GitHub Actions</li>
+      </ul>
+      <code>Docker</code> <code>TensorFlow</code> <code>GitHub Actions</code>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/ConstructionLandingPage">🏗️ BuildIt Construction</a></b><br>
+      <sub>Responsive business website</sub>
+      <ul>
+        <li>Services, projects gallery and contact form</li>
+        <li>Light/dark theme and responsive layout</li>
+      </ul>
+      <code>Next.js</code> <code>React</code> <code>TypeScript</code> <code>Tailwind CSS</code>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🛠️ Tech stack
+
+<p>
+  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,sklearn,fastapi,ts,react,nextjs,tailwind,postgres,sqlite,supabase,docker,githubactions,linux,git&perline=16" alt="Tech stack icons">
+</p>
+
+| Area | Skills |
+|---|---|
+| **Computer vision** | Object detection (YOLOv11), vision-language models (GPT-5.5, Qwen3-VL), super-resolution (Real-ESRGAN), OCR, synthetic data, evaluation (mAP, precision/recall) |
+| **Machine learning** | PyTorch, TensorFlow, scikit-learn, NumPy, Pillow |
+| **AI engineering** | GPU inference (Modal), LLM and speech APIs (OpenAI, DeepSeek), asynchronous job pipelines |
+| **Software** | Python, TypeScript, FastAPI, REST APIs, React, Next.js, PostgreSQL, SQLite |
+| **Tools** | Git, Docker, GitHub Actions, Linux |
+
+---
+
+<p align="center">
+  📫 Let's connect: <a href="mailto:wincheahken@gmail.com">wincheahken@gmail.com</a>
+</p>
