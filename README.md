@@ -85,27 +85,12 @@ A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce fa
       <code>Python</code> <code>FastAPI</code> <code>OpenAI</code> <code>DeepSeek</code> <code>Docker</code>
     </td>
   </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/kwincheah/TFContainerDockerCodebase">🐳 TensorFlow ML Container</a></b><br>
-      <sub>Reproducible training environment</sub>
-      <ul>
-        <li>Ubuntu + Python + TensorFlow image with NumPy, Pandas and scikit-learn</li>
-        <li>Published to GitHub Container Registry by GitHub Actions</li>
-      </ul>
-      <code>Docker</code> <code>TensorFlow</code> <code>GitHub Actions</code>
-    </td>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/kwincheah/ConstructionLandingPage">🏗️ BuildIt Construction</a></b><br>
-      <sub>Responsive business website</sub>
-      <ul>
-        <li>Services, projects gallery and contact form</li>
-        <li>Light/dark theme and responsive layout</li>
-      </ul>
-      <code>Next.js</code> <code>React</code> <code>TypeScript</code> <code>Tailwind CSS</code>
-    </td>
-  </tr>
 </table>
+
+**Other projects**
+
+- [BuildIt Construction](https://github.com/kwincheah/ConstructionLandingPage): responsive business website with a projects gallery, contact form and light/dark theme · `Next.js` `React` `TypeScript` `Tailwind CSS`
+- [TensorFlow ML Container](https://github.com/kwincheah/TFContainerDockerCodebase): reproducible Docker environment for ML and computer vision, with a CI smoke test · `Docker` `TensorFlow` `GitHub Actions`
 
 ---
 
