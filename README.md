@@ -90,7 +90,7 @@ A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce fa
 **Other projects**
 
 - [BuildIt Construction](https://github.com/kwincheah/ConstructionLandingPage): responsive business website with a projects gallery, contact form and light/dark theme · `Next.js` `React` `TypeScript` `Tailwind CSS`
-- [TensorFlow ML Container](https://github.com/kwincheah/TFContainerDockerCodebase): reproducible Docker environment for ML and computer vision, with a CI smoke test · `Docker` `TensorFlow` `GitHub Actions`
+- [RunPod CV Environment](https://github.com/kwincheah/TFContainerDockerCodebase): GPU-ready Docker image (PyTorch + CUDA, YOLO, Transformers, JupyterLab, SSH) for computer vision training on RunPod, with caches kept on the network volume · `Docker` `PyTorch` `CUDA` `GitHub Actions`
 
 ---
 
