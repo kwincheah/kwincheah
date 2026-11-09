@@ -85,19 +85,40 @@ A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce fa
       <code>Python</code> <code>FastAPI</code> <code>OpenAI</code> <code>DeepSeek</code> <code>Docker</code>
     </td>
   </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/tailscaleNotify">🔔 TailscaleNotify</a></b><br>
+      <sub>Native desktop alert and quick-action overlay for Tailscale Taildrop</sub>
+      <ul>
+        <li>Real-time file watcher with debounced arrival detection across macOS, Windows, and Linux</li>
+        <li>Smart filtering: checks macOS quarantine xattrs & Windows Zone.Identifier to isolate Taildrop transfers</li>
+        <li>macOS AppKit floating NSPanel over full-screen apps; rich image previews and safe scoped execution</li>
+      </ul>
+      <code>Rust</code> <code>Tauri</code> <code>TypeScript</code> <code>Vite</code>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/TFContainerDockerCodebase">🐳 RunPod CV Environment</a></b><br>
+      <sub>GPU-ready container for CV model training</sub>
+      <ul>
+        <li>CUDA-accelerated Docker environment (PyTorch, YOLO, Transformers, JupyterLab, SSH)</li>
+        <li>Optimised for cloud GPU training on RunPod with persistent network volume caching</li>
+        <li>Automated container builds and testing via GitHub Actions</li>
+      </ul>
+      <code>Docker</code> <code>PyTorch</code> <code>CUDA</code> <code>GitHub Actions</code> <code>Linux</code>
+    </td>
+  </tr>
 </table>
 
 **Other projects**
 
 - [BuildIt Construction](https://github.com/kwincheah/ConstructionLandingPage): responsive business website with a projects gallery, contact form and light/dark theme · `Next.js` `React` `TypeScript` `Tailwind CSS`
-- [RunPod CV Environment](https://github.com/kwincheah/TFContainerDockerCodebase): GPU-ready Docker image (PyTorch + CUDA, YOLO, Transformers, JupyterLab, SSH) for computer vision training on RunPod, with caches kept on the network volume · `Docker` `PyTorch` `CUDA` `GitHub Actions`
 
 ---
 
 ### 🛠️ Tech stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,sklearn,fastapi,ts,react,nextjs,tailwind,postgres,sqlite,supabase,docker,githubactions,linux,git&perline=16" alt="Tech stack icons">
+  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,sklearn,fastapi,rust,tauri,ts,react,nextjs,tailwind,postgres,sqlite,supabase,docker,githubactions,linux,git&perline=18" alt="Tech stack icons">
 </p>
 
 | Area | Skills |
@@ -105,7 +126,7 @@ A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce fa
 | **Computer vision** | Object detection (YOLOv11), vision-language models (GPT-5.5, Qwen3-VL), super-resolution (Real-ESRGAN), OCR, synthetic data, evaluation (mAP, precision/recall) |
 | **Machine learning** | PyTorch, TensorFlow, scikit-learn, NumPy, Pillow |
 | **AI engineering** | GPU inference (Modal), LLM and speech APIs (OpenAI, DeepSeek), asynchronous job pipelines |
-| **Software** | Python, TypeScript, FastAPI, REST APIs, React, Next.js, PostgreSQL, SQLite |
+| **Software** | Python, TypeScript, Rust, FastAPI, REST APIs, Tauri, React, Next.js, PostgreSQL, SQLite |
 | **Tools** | Git, Docker, GitHub Actions, Linux |
 
 ---
