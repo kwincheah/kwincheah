@@ -92,6 +92,28 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/ytl-power-satellite-geoint">🛰️ Satellite GEOINT Tracker</a></b><br>
+      <sub>Geospatial computer vision pipeline, deployed on Google Cloud</sub>
+      <ul>
+        <li>Pulls <b>Sentinel-2</b> imagery through STAC as Cloud-Optimized GeoTIFFs (HTTP range requests)</li>
+        <li>Colour-space segmentation measures a data centre and solar campus buildout (over 100 ha of new solar), compared with the share price</li>
+        <li><b>Cloud Run</b> + weekly <b>Cloud Scheduler</b> ingestion + <b>BigQuery</b> telemetry; token-protected admin endpoints</li>
+      </ul>
+      <code>Python</code> <code>OpenCV</code> <code>rasterio</code> <code>FastAPI</code> <code>Cloud Run</code> <code>BigQuery</code>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/FinanceReportAnalyzer">📈 Bursa Intelligence</a></b><br>
+      <sub>Financial analysis terminal for Bursa Malaysia equities</sub>
+      <ul>
+        <li>Automated quarterly report ingestion, financial statements and interactive charts</li>
+        <li><b>4-stage RAG pipeline</b>: table-aware chunking, hybrid BM25 + ChromaDB retrieval (RRF), cross-encoder reranking, cited answers</li>
+        <li>Web app and Tauri desktop build</li>
+      </ul>
+      <code>Python</code> <code>FastAPI</code> <code>RAG</code> <code>ChromaDB</code> <code>Next.js</code> <code>Tauri</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <b><a href="https://github.com/kwincheah/Glove-AI-Performance-Tracker">🧤 Glove AI Performance Tracker</a></b><br>
       <sub>Multi-line inspection and AI model validation app (internship)</sub>
       <ul>
@@ -114,16 +136,6 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <b><a href="https://github.com/kwincheah/FinanceReportAnalyzer">📈 Bursa Intelligence</a></b><br>
-      <sub>Financial analysis terminal for Bursa Malaysia equities</sub>
-      <ul>
-        <li>Automated quarterly report ingestion, financial statements and interactive charts</li>
-        <li><b>4-stage RAG pipeline</b>: table-aware chunking, hybrid BM25 + ChromaDB retrieval (RRF), cross-encoder reranking, cited answers</li>
-        <li>Web app and Tauri desktop build</li>
-      </ul>
-      <code>Python</code> <code>FastAPI</code> <code>RAG</code> <code>ChromaDB</code> <code>Next.js</code> <code>Tauri</code>
-    </td>
-    <td width="50%" valign="top">
       <b><a href="https://github.com/kwincheah/superres-ai">🖼️ SuperResAI</a></b><br>
       <sub>AI image super-resolution platform</sub>
       <ul>
@@ -132,18 +144,6 @@
         <li>FastAPI backend, Next.js frontend with a before/after view, Supabase for jobs and storage</li>
       </ul>
       <code>PyTorch</code> <code>Real-ESRGAN</code> <code>FastAPI</code> <code>Next.js</code> <code>Supabase</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/kwincheah/tailscaleNotify">🔔 TailscaleNotify</a></b><br>
-      <sub>Native desktop alert and quick-action overlay for Tailscale Taildrop</sub>
-      <ul>
-        <li>Real-time file watcher with debounced arrival detection on macOS, Windows and Linux</li>
-        <li>Filters out browser downloads using macOS quarantine xattrs and Windows Zone.Identifier</li>
-        <li>Floating macOS panel over full-screen apps, image previews, safe scoped file opening</li>
-      </ul>
-      <code>Rust</code> <code>Tauri</code> <code>TypeScript</code>
     </td>
     <td width="50%" valign="top">
       <b><a href="https://github.com/kwincheah/TFContainerDockerCodebase">🐳 RunPod CV Environment</a></b><br>
@@ -160,6 +160,7 @@
 
 **Other projects**
 
+- [TailscaleNotify](https://github.com/kwincheah/tailscaleNotify): native desktop alert and quick-action overlay for Tailscale Taildrop, with browser-download filtering on macOS, Windows and Linux · `Rust` `Tauri` `TypeScript`
 - [BuildIt Construction](https://github.com/kwincheah/ConstructionLandingPage): responsive business website with a projects gallery, contact form and light/dark theme · `Next.js` `React` `TypeScript` `Tailwind CSS`
 
 ---
@@ -167,15 +168,16 @@
 ### 🛠️ Tech stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=py,pytorch,opencv,cs,dotnet,qt,fastapi,rust,tauri,ts,react,nextjs,postgres,sqlite,docker,githubactions,linux,git&perline=18" alt="Tech stack icons">
+  <img src="https://skillicons.dev/icons?i=py,pytorch,opencv,cs,dotnet,qt,fastapi,rust,tauri,ts,react,nextjs,postgres,sqlite,docker,gcp,githubactions,linux,git&perline=19" alt="Tech stack icons">
 </p>
 
 | Area | Skills |
 |---|---|
-| **Computer vision** | Object detection (YOLOv11), vision-language models (GPT-5.5, Qwen3-VL), industrial cameras and calibration, OCR, super-resolution (Real-ESRGAN), synthetic data, evaluation (mAP, precision/recall, F1) |
+| **Computer vision** | Object detection (YOLOv11), vision-language models (GPT-5.5, Qwen3-VL), satellite imagery (Sentinel-2, STAC), industrial cameras and calibration, OCR, super-resolution (Real-ESRGAN), synthetic data, evaluation (mAP, precision/recall, F1) |
 | **Machine learning** | PyTorch, Ultralytics, ONNX, TensorRT, scikit-learn, NumPy |
 | **AI engineering** | Tool-using LLM agents, structured outputs (JSON Schema), RAG, MCP, LLM APIs (Claude, OpenAI, DeepSeek), GPU inference |
 | **Software** | Python, C# / .NET (WPF), TypeScript, Rust, FastAPI, Qt (PyQt6 / QML), Next.js, Tauri, SQL (PostgreSQL, SQLite) |
+| **Cloud** | Google Cloud (Cloud Run, Cloud Scheduler, BigQuery), Railway, Modal, Supabase |
 | **Tools** | Git, Docker, GitHub Actions, pytest, Linux, Hikrobot VisionMaster |
 
 ---
