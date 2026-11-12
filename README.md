@@ -2,30 +2,43 @@
 
 <p align="center">
   <b>Computer Vision · AI Engineering · Software Engineering</b><br>
-  Final-year Computer Science student at Universiti Tunku Abdul Rahman (UTAR), completing my degree in October 2026 · Malaysia
+  Computer Science graduate, First Class Honours (Distinction), Universiti Tunku Abdul Rahman (UTAR), 2026 · Malaysia
 </p>
 
 <p align="center">
   <a href="mailto:wincheahken@gmail.com"><img src="https://img.shields.io/badge/Email-wincheahken%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://github.com/kwincheah"><img src="https://img.shields.io/badge/GitHub-kwincheah-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"></a>
-  <img src="https://img.shields.io/badge/Open_to-Graduate_roles-2EA44F?style=flat-square" alt="Open to graduate roles">
+  <img src="https://img.shields.io/badge/Open_to-Graduate_roles_·_Malaysia_&_Singapore-2EA44F?style=flat-square" alt="Open to graduate roles in Malaysia and Singapore">
 </p>
 
 ---
 
 ### 👋 About me
 
-- I build **computer vision** systems: object detection, vision-language models and image enhancement
+- I build **computer vision and AI software that runs outside the notebook**: trained models, inspection tools, APIs and desktop apps
 - I care about the whole pipeline: **datasets → training → evaluation → deployment**
-- 🎯 Looking for **graduate roles in Computer Vision, AI Engineering or Software Engineering**, available from **October 2026**
+- Industry experience as an **Application Engineer Intern in machine vision** (Bitmap Engineering, Oct 2025 – Jan 2026)
+- 🎯 Looking for **graduate roles in Computer Vision, AI Engineering or Software Engineering**, available now
 
 ---
 
-### 🔬 Featured: Final Year Project
+### 💼 Experience
 
-#### Hybrid PCB Defect Inspection with YOLO and Vision-Language Models
+**Application Engineer Intern (Machine Vision / Deep Learning)**, Bitmap Engineering · Oct 2025 – Jan 2026
 
-A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce false rejections (overkill)** caused by harmless visual anomalies.
+- Trained and evaluated **5 deep learning defect-detection models** for glove manufacturing (stain, hole, tear and more) with Hikrobot VisionMaster, on a ~20,000-image dataset
+- Cut the longest training run from **~26 hours to 1.5 hours** (about 94% faster)
+- Built the [**Glove AI Performance Tracker**](https://github.com/kwincheah/Glove-AI-Performance-Tracker): a C# / WPF app running up to **11 concurrent inspection flows across 12 production lines at ~12 ms per image**
+
+---
+
+### 🔬 Featured research: Final Year Project
+
+#### [Hybrid YOLO + Vision-Language Model framework for out-of-distribution PCB defects](https://github.com/kwincheah/FYP-PCB-Inspection)
+
+**Question:** can a vision-language model (VLM) reliably judge a detector's uncertain defect calls, and cut false rejections (overkill) caused by harmless marks?
+
+**Key finding:** across **7 VLM configurations**, general accuracy did **not** predict adjudication value. **Qwen3-VL-30B-A3B (Mixture-of-Experts)** cut the detector's false rejections by **52.7%**, despite lower diagnostic accuracy than GPT-5.5. I proposed the **Overkill Reduction Rate (ORR)** as a system-level metric for this.
 
 <p align="center">
   <code>YOLOv11n Observer</code> &nbsp;→&nbsp; <code>Agentic Gateway</code> &nbsp;→&nbsp; <code>VLM Judge</code><br>
@@ -34,55 +47,91 @@ A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce fa
 
 <table align="center">
   <tr>
-    <th>mAP@0.5</th>
-    <th>mAP@0.5:0.95</th>
+    <th>Overkill reduction (ORR)</th>
+    <th>VLM configurations tested</th>
+    <th>Baseline mAP@0.5</th>
     <th>Precision</th>
     <th>Recall</th>
-    <th>Overkill reduction</th>
-    <th>VLM configurations tested</th>
   </tr>
   <tr align="center">
-    <td><b>0.962</b></td>
-    <td>0.599</td>
-    <td>0.972</td>
-    <td>0.968</td>
     <td><b>52.7%</b></td>
     <td>7</td>
+    <td>0.962</td>
+    <td>0.972</td>
+    <td>0.968</td>
   </tr>
 </table>
 
-- Extended a **TDD-Net**-derived dataset (6 defect classes) with **11 synthetic anomaly categories** to test behaviour beyond known defects. Evaluated on a fixed **1,443-image** test set.
-- Escalated detections go to the VLM as **high-resolution crops with bounding-box guidance**, which returns structured judgements on structural damage and conductor interaction
-- **GPT-5.5** achieved the best diagnostic accuracy. **Qwen3-VL-30B-A3B (MoE)** achieved the highest overkill reduction, and MoE variants clearly beat Dense variants on it
-- Proposed the **Overkill Reduction Rate (ORR)** as a system-level metric: a VLM's general accuracy did **not** predict how well it adjudicates
+- Extended a TDD-Net-derived dataset (6 defect classes) with **11 synthetic anomaly categories**; fixed 1,443-image test set
+- Escalated detections reach the VLM as **high-resolution crops with bounding-box guidance** and return structured judgements
+- Mixture-of-Experts variants clearly beat Dense variants on overkill reduction
 
-`YOLOv11` `PyTorch` `Vision-Language Models` `GPT-5.5` `Qwen3-VL` `Python` &nbsp;·&nbsp; *Computer Vision, AI for Smart Manufacturing*
+`YOLOv11` `PyTorch` `Vision-Language Models` `GPT-5.5` `Qwen3-VL` `Python` &nbsp;·&nbsp; [Full report](https://github.com/kwincheah/FYP-PCB-Inspection/tree/main/report)
 
 ---
 
-### 🚀 Projects
+### 🏭 Featured project: Apex Industrial Vision Studio
+
+#### [Desktop machine vision platform](https://github.com/kwincheah/vision-studio): build inspections by wiring blocks, or describe them and let AI build them
+
+<p align="center">
+  <a href="https://github.com/kwincheah/vision-studio"><img src="https://github.com/kwincheah/vision-studio/raw/main/docs/screenshots/qml/workspace_flow.png" alt="Apex Vision Studio flow editor" width="85%"></a>
+</p>
+
+- Node-based flow editor with **40 image processing, measurement and location tools** plus **YOLO inference** from PyTorch, ONNX or TensorRT engines
+- **Hikrobot GigE / USB3 industrial cameras**, RTSP streams, OpenCV lens calibration, and a TCP/IP tool that sends OK/NG results to PLCs and robots
+- **AI Gen**: a tool-using LLM agent that turns plain-language requests into validated inspection flows, checking against a JSON Schema and repairing its own errors (Claude, OpenAI, Gemini, DeepSeek, local Ollama and more)
+- Plugin SDK, **1,300+ automated tests** in GitHub Actions CI, packaged Windows installer
+
+`Python` `Qt Quick / QML` `OpenCV` `PyTorch` `ONNX` `TensorRT` `pytest`
+
+---
+
+### 🚀 More projects
 
 <table>
   <tr>
     <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/Glove-AI-Performance-Tracker">🧤 Glove AI Performance Tracker</a></b><br>
+      <sub>Multi-line inspection and AI model validation app (internship)</sub>
+      <ul>
+        <li>Up to 11 concurrent inspection flows across 12 production lines, ~12 ms per image</li>
+        <li>Thread-safe procedure pool, rate limiting, live views and per-line yield summaries</li>
+        <li>Background export of false positives / negatives for retraining</li>
+      </ul>
+      <code>C#</code> <code>.NET</code> <code>WPF</code> <code>Hikrobot VisionMaster SDK</code>
+    </td>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/whatsapp_transcript_service">🎙️ WhatsApp Voice & Document Assistant</a></b><br>
+      <sub>Deployed AI assistant on WhatsApp</sub>
+      <ul>
+        <li>Transcribes, summarises and translates voice notes and videos (built for Manglish)</li>
+        <li><b>OCR for scanned PDFs</b>; answers questions about documents; web search with sources</li>
+        <li>SQL data layer with FTS5 search and cost reporting; Docker on Railway, pytest in CI</li>
+      </ul>
+      <code>Python</code> <code>FastAPI</code> <code>SQLite</code> <code>OpenAI</code> <code>DeepSeek</code> <code>Docker</code>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b><a href="https://github.com/kwincheah/FinanceReportAnalyzer">📈 Bursa Intelligence</a></b><br>
+      <sub>Financial analysis terminal for Bursa Malaysia equities</sub>
+      <ul>
+        <li>Automated quarterly report ingestion, financial statements and interactive charts</li>
+        <li><b>4-stage RAG pipeline</b>: table-aware chunking, hybrid BM25 + ChromaDB retrieval (RRF), cross-encoder reranking, cited answers</li>
+        <li>Web app and Tauri desktop build</li>
+      </ul>
+      <code>Python</code> <code>FastAPI</code> <code>RAG</code> <code>ChromaDB</code> <code>Next.js</code> <code>Tauri</code>
+    </td>
+    <td width="50%" valign="top">
       <b><a href="https://github.com/kwincheah/superres-ai">🖼️ SuperResAI</a></b><br>
       <sub>AI image super-resolution platform</sub>
       <ul>
-        <li>4× upscaling with <b>Real-ESRGAN</b> (RRDBNet) on <b>GPU workers</b> (Modal)</li>
+        <li>4× upscaling with <b>Real-ESRGAN</b> on <b>GPU workers</b> (Modal)</li>
         <li>Asynchronous job processing, so the UI never blocks</li>
         <li>FastAPI backend, Next.js frontend with a before/after view, Supabase for jobs and storage</li>
       </ul>
       <code>PyTorch</code> <code>Real-ESRGAN</code> <code>FastAPI</code> <code>Next.js</code> <code>Supabase</code>
-    </td>
-    <td width="50%" valign="top">
-      <b><a href="https://github.com/kwincheah/whatsapp_transcript_service">🎙️ WhatsApp Voice & Document Assistant</a></b><br>
-      <sub>AI assistant on WhatsApp</sub>
-      <ul>
-        <li>Transcribes, summarises and translates voice notes and videos</li>
-        <li><b>OCR for scanned PDFs</b> with a vision model; answers questions about documents; web search</li>
-        <li>Docker on Railway, with CI running a pytest suite</li>
-      </ul>
-      <code>Python</code> <code>FastAPI</code> <code>OpenAI</code> <code>DeepSeek</code> <code>Docker</code>
     </td>
   </tr>
   <tr>
@@ -90,19 +139,19 @@ A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce fa
       <b><a href="https://github.com/kwincheah/tailscaleNotify">🔔 TailscaleNotify</a></b><br>
       <sub>Native desktop alert and quick-action overlay for Tailscale Taildrop</sub>
       <ul>
-        <li>Real-time file watcher with debounced arrival detection across macOS, Windows, and Linux</li>
-        <li>Smart filtering: checks macOS quarantine xattrs & Windows Zone.Identifier to isolate Taildrop transfers</li>
-        <li>macOS AppKit floating NSPanel over full-screen apps; rich image previews and safe scoped execution</li>
+        <li>Real-time file watcher with debounced arrival detection on macOS, Windows and Linux</li>
+        <li>Filters out browser downloads using macOS quarantine xattrs and Windows Zone.Identifier</li>
+        <li>Floating macOS panel over full-screen apps, image previews, safe scoped file opening</li>
       </ul>
-      <code>Rust</code> <code>Tauri</code> <code>TypeScript</code> <code>Vite</code>
+      <code>Rust</code> <code>Tauri</code> <code>TypeScript</code>
     </td>
     <td width="50%" valign="top">
       <b><a href="https://github.com/kwincheah/TFContainerDockerCodebase">🐳 RunPod CV Environment</a></b><br>
-      <sub>GPU-ready container for CV model training</sub>
+      <sub>GPU-ready container for CV and VLM work</sub>
       <ul>
-        <li>CUDA-accelerated Docker environment (PyTorch, YOLO, Transformers, JupyterLab, SSH)</li>
-        <li>Optimised for cloud GPU training on RunPod with persistent network volume caching</li>
-        <li>Automated container builds and testing via GitHub Actions</li>
+        <li>Version-pinned PyTorch + CUDA 12.6, Ultralytics YOLO, Transformers, JupyterLab and SSH</li>
+        <li>Model and dataset caches on a persistent network volume, so new pods start ready to train</li>
+        <li>Automated build, GPU smoke test and publishing via GitHub Actions</li>
       </ul>
       <code>Docker</code> <code>PyTorch</code> <code>CUDA</code> <code>GitHub Actions</code> <code>Linux</code>
     </td>
@@ -118,16 +167,16 @@ A PCB inspection framework that keeps YOLO's speed and uses a VLM to **reduce fa
 ### 🛠️ Tech stack
 
 <p>
-  <img src="https://skillicons.dev/icons?i=py,pytorch,tensorflow,sklearn,fastapi,rust,tauri,ts,react,nextjs,tailwind,postgres,sqlite,supabase,docker,githubactions,linux,git&perline=18" alt="Tech stack icons">
+  <img src="https://skillicons.dev/icons?i=py,pytorch,opencv,cs,dotnet,qt,fastapi,rust,tauri,ts,react,nextjs,postgres,sqlite,docker,githubactions,linux,git&perline=18" alt="Tech stack icons">
 </p>
 
 | Area | Skills |
 |---|---|
-| **Computer vision** | Object detection (YOLOv11), vision-language models (GPT-5.5, Qwen3-VL), super-resolution (Real-ESRGAN), OCR, synthetic data, evaluation (mAP, precision/recall) |
-| **Machine learning** | PyTorch, TensorFlow, scikit-learn, NumPy, Pillow |
-| **AI engineering** | GPU inference (Modal), LLM and speech APIs (OpenAI, DeepSeek), asynchronous job pipelines |
-| **Software** | Python, TypeScript, Rust, FastAPI, REST APIs, Tauri, React, Next.js, PostgreSQL, SQLite |
-| **Tools** | Git, Docker, GitHub Actions, Linux |
+| **Computer vision** | Object detection (YOLOv11), vision-language models (GPT-5.5, Qwen3-VL), industrial cameras and calibration, OCR, super-resolution (Real-ESRGAN), synthetic data, evaluation (mAP, precision/recall, F1) |
+| **Machine learning** | PyTorch, Ultralytics, ONNX, TensorRT, scikit-learn, NumPy |
+| **AI engineering** | Tool-using LLM agents, structured outputs (JSON Schema), RAG, MCP, LLM APIs (Claude, OpenAI, DeepSeek), GPU inference |
+| **Software** | Python, C# / .NET (WPF), TypeScript, Rust, FastAPI, Qt (PyQt6 / QML), Next.js, Tauri, SQL (PostgreSQL, SQLite) |
+| **Tools** | Git, Docker, GitHub Actions, pytest, Linux, Hikrobot VisionMaster |
 
 ---
 
